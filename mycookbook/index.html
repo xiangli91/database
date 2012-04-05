@@ -1,20 +1,30 @@
 <html>
-  <head><title>Welcome to MyCookBook.com</title></head>
+  <head>
+  <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
+  <title>Welcome to MyCookBook.com</title></head>
   <body>
-    <h1><center>Welcome to MyCookBook.com!</center></h1>
-	
-	<br> Search for receipes, login to your CookBook, or join to become a member today!</br>
-	
-	<form action="http://localhost:9999/mycookbook/search.html">
-		<input type ="submit" value="Search for Receipes" />
+	<div class="page-header">
+		<h1>myCookBook</h1>
+		<span>
+		<form action="http://localhost:9999/mycookbook/search.html" class="pull-right">
+		<input type ="submit" class="span3 btn small primary" value="Search for Receipes" />
 	</form>
+	</span>
+	</div>
+  
+	
+				
+	
+	<br><strong> Search for receipes, login to your CookBook, or join to become a member today!</br>
+	
+	<br>
 	
 	<form action="http://localhost:9999/mycookbook/login.html">
-		<input type ="submit" value="Login" />
+		<input type ="submit" class="btn large primary" value="Login" />
 	</form>
 	
 	<form action="http://localhost:9999/mycookbook/join.html">
-		<input type ="submit" value="Join Today!" />
+		<input type ="submit" class="btn large primary" value="Join Today!" />
 	</form>
 	
   </body>
