@@ -6,6 +6,14 @@
   version="3.0"
   metadata-complete="true">
  
+	 <welcome-file-list> 
+        <welcome-file>memberhome</welcome-file> 
+    </welcome-file-list> 
+	
+	<servlet>
+      <servlet-name>MemberHome</servlet-name>
+      <servlet-class>MemberHome</servlet-class>
+   </servlet>
  
    <servlet>
       <servlet-name>AddaMember</servlet-name>
@@ -17,17 +25,23 @@
       <servlet-class>Login</servlet-class>
 	</servlet>
  
-	<servlet>
-      <servlet-name>HelloWorld</servlet-name>
-      <servlet-class>HelloServlet</servlet-class>
+<servlet>
+      <servlet-name>Logout</servlet-name>
+      <servlet-class>Logout</servlet-class>
 	</servlet>
  
-  
  
+ 
+ 
+ 
+
+ 
+  
    <servlet-mapping>
-      <servlet-name>HelloWorld</servlet-name>
-      <url-pattern>/sayhello</url-pattern>
+      <servlet-name>MemberHome</servlet-name>
+      <url-pattern>/memberhome</url-pattern>
    </servlet-mapping>
+ 
  
    <servlet-mapping>
       <servlet-name>AddaMember</servlet-name>
@@ -37,6 +51,11 @@
    <servlet-mapping>
       <servlet-name>Login</servlet-name>
       <url-pattern>/login</url-pattern>
+   </servlet-mapping>
+   
+    <servlet-mapping>
+      <servlet-name>Logout</servlet-name>
+      <url-pattern>/logout</url-pattern>
    </servlet-mapping>
    
 </web-app>
