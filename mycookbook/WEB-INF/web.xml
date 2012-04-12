@@ -30,12 +30,35 @@
       <servlet-class>Logout</servlet-class>
 	</servlet>
  
+ <servlet>
+      <servlet-name>MyFridge</servlet-name>
+      <servlet-class>MyFridge</servlet-class>
+	</servlet>
  
+  <servlet>
+      <servlet-name>UpdateFridge</servlet-name>
+      <servlet-class>UpdateFridge</servlet-class>
+	</servlet>
  
+	<servlet>
+      <servlet-name>MyRecipe</servlet-name>
+      <servlet-class>MyRecipe</servlet-class>
+	</servlet>
  
- 
-
- 
+  
+	<servlet>
+      <servlet-name>AddRecipePage</servlet-name>
+      <servlet-class>AddRecipePage</servlet-class>
+	</servlet>
+  
+  <servlet>
+      <servlet-name>AddRecipe</servlet-name>
+      <servlet-class>AddRecipe</servlet-class>
+	</servlet>
+  
+  
+  
+  
   
    <servlet-mapping>
       <servlet-name>MemberHome</servlet-name>
@@ -57,5 +80,35 @@
       <servlet-name>Logout</servlet-name>
       <url-pattern>/logout</url-pattern>
    </servlet-mapping>
+   
+      <servlet-mapping>
+      <servlet-name>MyFridge</servlet-name>
+      <url-pattern>/myfridge</url-pattern>
+   </servlet-mapping>
+   
+       <servlet-mapping>
+      <servlet-name>UpdateFridge</servlet-name>
+      <url-pattern>/updatefridge</url-pattern>
+   </servlet-mapping>
+   
+   
+    <servlet-mapping>
+      <servlet-name>MyRecipe</servlet-name>
+      <url-pattern>/myrecipe</url-pattern>
+   </servlet-mapping>
+  
+    <servlet-mapping>
+      <servlet-name>AddRecipePage</servlet-name>
+      <url-pattern>/addrecipepage</url-pattern>
+   </servlet-mapping>
+   
+   
+    <servlet-mapping>
+      <servlet-name>AddRecipe</servlet-name>
+      <url-pattern>/addrecipe</url-pattern>
+   </servlet-mapping>
+   
+   
+   
    
 </web-app>

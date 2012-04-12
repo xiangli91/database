@@ -1,0 +1,116 @@
+create database mycookbook
+use food; 
+
+create table if not exists members(
+	email varchar(100) NOT NULL,
+	name varchar(150) NOT NULL,
+	password varchar(50) NOT NULL, 
+	num_likes int,
+	PRIMARY KEY (email)
+);
+
+create table if not exists ingredients(
+	ingredient varchar(200) NOT NULL,
+	kcal float,
+	protein float,
+	fat float,
+	carbohydrate float,
+	fiber float,
+	sugar float,
+	clacium float,
+	iron float,
+	magnesium float,
+	potassium float,
+	sodium float,
+	zinc float,
+	copper float,
+	vitamin_c float,
+	weight1 float,
+	measure1 varchar(50),
+	weight2 float,
+	measure2 varchar(50),
+	PRIMARY KEY (ingredient)
+);
+
+create table if not exists dishes(
+	dishname varchar(50) NOT NULL,
+	PRIMARY KEY (dishname)
+);
+
+create table if not exists fridge(
+	email varchar(100) NOT NULL,
+	ingredient varchar(100) NOT NULL,
+	PRIMARY KEY(email, ingredient),
+	FOREIGN KEY(email) references members (email),
+	FOREIGN KEY(ingredient) references ingredients (ingredient)
+);
+	
+
+create table if not exists recipes(
+	recipe_id int NOT NULL,
+	dishname varchar(50) NOT NULL,
+	email varchar(50),
+	instructions text,
+	num_comments int,
+	num_likes int,
+	kcal float,
+	protein float,
+	fat float,
+	carbohydrate float,
+	fiber float,
+	sugar float,
+	clacium float,
+	iron float,
+	magnesium float,
+	potassium float,
+	sodium float,
+	zinc float,
+	copper float,
+	vitamin_c float,
+	num_served int NOT NULL, 
+	time datetime,
+	PRIMARY KEY (recipe_id),
+	FOREIGN KEY (dishname) references dishes(dishname)
+);
+
+create table if not exists recipe_ingredients(
+	recipe_id int NOT NULL,
+	ingredient varchar(100) NOT NULL,
+	measure varchar(100) NOT NULL,
+	weight float NOT NULL,
+	PRIMARY KEY(recipe_id, ingredient),
+	FOREIGN KEY(recipe_id) references recipes(recipe_id),
+	FOREIGN KEY(ingredient) references ingredients(ingredient)
+);
+
+
+create table if not exists recipe_comments(
+	comment_id int NOT NULL,
+	recipe_id int NOT NULL,
+	email varchar(100) NOT NULL,
+	comment text NOT NULL,
+	PRIMARY KEY(comment_id),
+	FOREIGN KEY(recipe_id) references recipes(recipe_id),
+	FOREIGN KEY(email) references members(email)
+);
+
+create table if not exists recipe_likes(
+	liker_email varchar(100) NOT NULL,
+	likee_email varchar(100) NOT NULL,
+	recipe_id int NOT NULL,
+	PRIMARY KEY(liker_email, likee_email, recipe_id),
+	FOREIGN KEY(liker_email) references members(email),
+	FOREIGN KEY(likee_email) references members(email),
+	FOREIGN KEY(recipe_id) references recipes(recipe_id)
+);
+
+	
+load data local infile 'C:/Users/Li Zheng/Desktop/Penn Work/CIS 330/Project/Data/ingredients.csv' into table ingredients
+	columns terminated by ','
+	lines terminated by '\r\n';
+	
+load data local infile 'C:/Users/Li Zheng/Desktop/Penn Work/CIS 330/Project/Data/dish.csv' into table dishes
+	columns terminated by ','
+	lines terminated by '\r\n';
+	
+	
