@@ -76,7 +76,7 @@ public class MyRecipe extends HttpServlet {
 				String email = (String) session.getAttribute("email"); 
 				Statement statement = connection.createStatement();
 				String query = "Select dishname, num_comments, num_likes from recipes where email = '" + email +"'" + 
-								"order by time";
+								"order by time desc";
 				ResultSet rs = statement.executeQuery(query);		
 				while (rs.next()){
 					col1.add(rs.getString(1));
@@ -113,7 +113,9 @@ public class MyRecipe extends HttpServlet {
 			if (col1.size()<1){
 				out.println("You have no recipes as of now! Time to do start creating your own cookbook today!");
 			}
+			
 			else{
+				out.println("<form>"); 
 				out.println("Here are you recipes!");
 				out.println("<TABLE BORDER=1>");
 				
@@ -127,14 +129,14 @@ public class MyRecipe extends HttpServlet {
 				// print the latest 10 recipes
 				 for (int i=0; i<Math.min(10,col1.size());i++){ 
 					 out.println("<TR>");
-					    out.println("<TD>" + col1.get(i) + "</TD>");
+					 	out.println("<TD>" + col1.get(i) + "</TD>");
 					    out.println("<TD>" + col2.get(i) + "</TD>");
 					    out.println("<TD>" + col3.get(i) + "</TD>");
 					  out.println("</TR>"); 
 				 }
 				 out.println("</TABLE>");
+				 out.println("</form>");
 			}
-			
 			
 			//Update your fridge
 			

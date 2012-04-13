@@ -70,7 +70,7 @@ public class MemberHome extends HttpServlet {
 			out.println("</form>");
 			
 			//Add Receipe
-			out.println("<form action=\"addrecipe\"> " +
+			out.println("<form action=\"addrecipepage\"> " +
 				"<input type =\"submit\" class=\"btn large primary\" value=\"Add a Receipe\" /> " +
 				"</form>");
 			

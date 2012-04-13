@@ -202,9 +202,9 @@ public class AddRecipe extends HttpServlet {
 						measure2 = rs.getString(4);
 					}
 					if(ingredient_measure[i].equals(measure1)){
-						scale = ingredient_quantity[i]/quantity1;
+						scale = ingredient_quantity[i]*quantity1/100;
 					}else{
-						scale = ingredient_quantity[i]/quantity2;
+						scale = ingredient_quantity[i]*quantity2/100;
 					}
 					
 					//get the numbers for 100g 
