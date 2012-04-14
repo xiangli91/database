@@ -34,7 +34,8 @@ public class Login extends HttpServlet {
 		Connection connection = null;
 		PrintWriter out = response.getWriter();
 		try{
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:8888/food", "myuser", "abcd");
+			connection = DriverManager.getConnection("jdbc:mysql://box289.bluehost.com/penniaac_llw", "penniaac_wll", "lixiang");
+			
 			Statement statement = connection.createStatement();
 			
 			out.println("<html><body>");

@@ -58,7 +58,7 @@ public class UpdateFridge extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		session.setAttribute("updatefridge", "Fail");
 		try{
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:8888/food", "myuser", "abcd");
+			connection = DriverManager.getConnection("jdbc:mysql://box289.bluehost.com/penniaac_llw", "penniaac_wll", "lixiang");
 			Statement statement = connection.createStatement();
 			
 			out.println("<html><body>");

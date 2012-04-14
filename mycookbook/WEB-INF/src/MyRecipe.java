@@ -72,7 +72,7 @@ public class MyRecipe extends HttpServlet {
 			LinkedList<String> col3 = new LinkedList<String>();
 			
 			try{
-				connection = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:8888/food", "myuser", "abcd");
+				connection = (Connection) DriverManager.getConnection("jdbc:mysql://box289.bluehost.com/penniaac_llw", "penniaac_wll", "lixiang");
 				String email = (String) session.getAttribute("email"); 
 				Statement statement = connection.createStatement();
 				String query = "Select dishname, num_comments, num_likes from recipes where email = '" + email +"'" + 

@@ -76,7 +76,7 @@ public class MyFridge extends HttpServlet {
 			LinkedList<String> all_ingredients = new LinkedList<String>();
 			Boolean empty = true;
 			try{
-				connection = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:8888/food", "myuser", "abcd");
+				connection = (Connection) DriverManager.getConnection("jdbc:mysql://box289.bluehost.com/penniaac_llw", "penniaac_wll", "lixiang");
 				String email = (String) session.getAttribute("email"); 
 				Statement statement = connection.createStatement();
 				String query = "Select ingredient from fridge where email = '" + email +"'" ;
@@ -138,7 +138,7 @@ public class MyFridge extends HttpServlet {
 			
 			//prepare the drop down menu
 			try{
-				connection = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:8888/food", "myuser", "abcd");
+				connection = (Connection) DriverManager.getConnection("jdbc:mysql://box289.bluehost.com/penniaac_llw", "penniaac_wll", "lixiang");
 				String email = (String) session.getAttribute("email"); 
 				Statement statement = connection.createStatement();
 				String query = "Select ingredient from ingredients" ;

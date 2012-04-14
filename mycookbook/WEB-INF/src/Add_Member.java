@@ -33,10 +33,9 @@ public class Add_Member extends HttpServlet {
 		String password = request.getParameter("password");
 		Connection connection = null;
 		PrintWriter out = response.getWriter();
-		
-		
+					
 		try{
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:8888/food", "myuser", "abcd");
+			connection = DriverManager.getConnection("jdbc:mysql://box289.bluehost.com/penniaac_llw", "penniaac_wll", "lixiang");
 			if(email== "" || name == "" || password== ""){
 				throw new SQLException(); 
 			}
@@ -78,9 +77,8 @@ public class Add_Member extends HttpServlet {
 				e.printStackTrace();
 			}
 		}
-		
-		
 	}
+	
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

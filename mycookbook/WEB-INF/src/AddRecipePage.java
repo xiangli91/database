@@ -103,7 +103,8 @@ public class AddRecipePage extends HttpServlet {
 			//Form1: dishname
 			LinkedList<String> dishnames = new LinkedList<String>();
 			try{
-				connection = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:8888/food", "myuser", "abcd");
+				//connection = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:8888/food", "myuser", "abcd");
+				connection = (Connection) DriverManager.getConnection("jdbc:mysql://box289.bluehost.com/penniaac_llw", "penniaac_wll", "lixiang");
 				Statement statement = connection.createStatement();
 				String query = "Select dishname from dishes" ;
 				ResultSet rs = statement.executeQuery(query);	

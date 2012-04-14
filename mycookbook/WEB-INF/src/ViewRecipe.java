@@ -59,7 +59,7 @@ public class ViewRecipe extends HttpServlet {
 		//Print: The recipe
 		
 		try{
-			connection = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:8888/food", "myuser", "abcd");
+			connection = (Connection) DriverManager.getConnection("jdbc:mysql://box289.bluehost.com/penniaac_llw", "penniaac_wll", "lixiang");
 			int recipe_id = Integer.parseInt((String) session.getAttribute("current_recipe_id")); 
 			Statement statement = connection.createStatement();
 			

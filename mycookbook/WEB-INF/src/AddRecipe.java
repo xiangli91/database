@@ -91,7 +91,7 @@ public class AddRecipe extends HttpServlet {
 		//A. Update the recipe table (other than nutrients)
 		Integer recipe_id = 0;
 		try{
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:8888/food", "myuser", "abcd");
+			connection = DriverManager.getConnection("jdbc:mysql://box289.bluehost.com/penniaac_llw", "penniaac_wll", "lixiang");
 			Statement statement = connection.createStatement();
 			
 			//find the largest recipeID, and add 1 to it:
@@ -140,7 +140,7 @@ public class AddRecipe extends HttpServlet {
 		
 		//B. Update the recipe_ingredients table
 		try{
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:8888/food", "myuser", "abcd");
+			connection = DriverManager.getConnection("jdbc:mysql://box289.bluehost.com/penniaac_llw", "penniaac_wll", "lixiang");
 			Statement statement = connection.createStatement();
 			String update = "";
 			
@@ -179,7 +179,7 @@ public class AddRecipe extends HttpServlet {
 			  
 			Float nutrients[][] = new Float[count][14]; //rows=count, number of ingredients. columns = 14 nutrients. 
 			try{
-				connection = DriverManager.getConnection("jdbc:mysql://localhost:8888/food", "myuser", "abcd");
+				connection = DriverManager.getConnection("jdbc:mysql://box289.bluehost.com/penniaac_llw", "penniaac_wll", "lixiang");
 				Statement statement = connection.createStatement();
 				//C.1 Get the nutritional values of each ingredient
 				String query = "";
