@@ -56,6 +56,25 @@
       <servlet-class>AddRecipe</servlet-class>
 	</servlet>
   
+  <servlet>
+      <servlet-name>ViewRecipe</servlet-name>
+      <servlet-class>ViewRecipe</servlet-class>
+	</servlet>
+  
+   <servlet>
+      <servlet-name>UpdateLike</servlet-name>
+      <servlet-class>UpdateLike</servlet-class>
+	</servlet>
+  
+  <servlet>
+      <servlet-name>AddComment</servlet-name>
+      <servlet-class>AddComment</servlet-class>
+	</servlet>
+  
+  <servlet>
+      <servlet-name>DeleteComment</servlet-name>
+      <servlet-class>DeleteComment</servlet-class>
+	</servlet>
   
   
   
@@ -108,6 +127,25 @@
       <url-pattern>/addrecipe</url-pattern>
    </servlet-mapping>
    
+    <servlet-mapping>
+      <servlet-name>ViewRecipe</servlet-name>
+      <url-pattern>/viewrecipe</url-pattern>
+   </servlet-mapping>
+   
+   <servlet-mapping>
+      <servlet-name>UpdateLike</servlet-name>
+      <url-pattern>/updatelike</url-pattern>
+   </servlet-mapping>
+   
+   <servlet-mapping>
+      <servlet-name>AddComment</servlet-name>
+      <url-pattern>/addcomment</url-pattern>
+   </servlet-mapping>
+   
+   <servlet-mapping>
+      <servlet-name>DeleteComment</servlet-name>
+      <url-pattern>/deletecomment</url-pattern>
+   </servlet-mapping>
    
    
    

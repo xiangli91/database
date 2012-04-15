@@ -100,7 +100,7 @@ public class MyFridge extends HttpServlet {
 			// Check for previous updates!
 			String updates = (String) session.getAttribute("updatefridge");
 			if (updates !=null){ 
-				if (updates.equals("Fail")){
+				if (updates.equals("Failure")){
 					out.println("Your update could not be completed.");
 					session.setAttribute("updatefridge", "done");
 				}
