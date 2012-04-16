@@ -55,6 +55,11 @@
       <servlet-name>AddRecipe</servlet-name>
       <servlet-class>AddRecipe</servlet-class>
 	</servlet>
+	
+	<servlet>
+		<servlet-name>SearchResults</servlet-name>
+		<servlet-class>SearchResults</servlet-class>
+	</servlet>
   
   
   
@@ -108,6 +113,10 @@
       <url-pattern>/addrecipe</url-pattern>
    </servlet-mapping>
    
+   <servlet-mapping>
+   		<servlet-name>SearchResults</servlet-name>
+   		<url-pattern>/searchresults</url-pattern>
+   </servlet-mapping>
    
    
    

@@ -1,12 +1,26 @@
 <html>
   <head><title>MyCookBook - Search</title></head>
   <body>
-    <h1>Receipt Search</h1>
+    <h1>Recipe Search</h1>
 	
-	<br>Search for receipes by name,cuisine, or main ingredients</br>
+	<div>Search for recipes by dishname or ingredients. Advanced search option is 
+	also available.</div>
 	
-	<!-<form action="http://localhost:9999/mycookbook/search
-	->
+	<div>
+		<form action="searchresults" method="get">
+			<input type="text" name="name">
+			<button type="submit" name="byingredient">by Ingredient</button>
+			<button type="submit" name="byname">by Name</button>
+			<div>
+				<br>
+				Advanced Search Options
+				<br>
+				Calories: <input type="text" name="calories">
+				Limit to My Fridge: <input type="checkbox" name="myfridge">
+				<button type="submit" name="advanced">Search</button>
+			</div>
+		</form>
+	</div>
 	
   </body>
 </html>
