@@ -154,7 +154,6 @@ public class AddRecipePage extends HttpServlet {
 			}
 			
 			//Form 4: preparation
-			
 			out.println("Input your instructions here");
 			out.println("<textarea cols=\"40\" rows=\"5\" name=\"instructions\">");
 			out.println("</textarea>");

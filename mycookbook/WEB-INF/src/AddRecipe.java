@@ -80,7 +80,7 @@ public class AddRecipe extends HttpServlet {
 		String time = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date);
 		
 		// Update Recipe condition: default: a failure
-		session.setAttribute("updaterecipe", "Fail");
+		session.setAttribute("updaterecipe", "Failure");
 
 		
 		// Set up the connection 
@@ -106,10 +106,19 @@ public class AddRecipe extends HttpServlet {
 				recipe_id ++;
 			}
 			
-			String update = "Insert into recipes (recipe_id, dishname, email, instructions, num_comments, num_likes, num_served, time) values ("
+			//get the creator's name
+			query = "Select name from members where email = '" + email + "'";
+			String creatorname = "";
+			rs = statement.executeQuery(query);	
+			while (rs.next()){
+				creatorname = rs.getString(1);
+			}
+			
+			String update = "Insert into recipes (recipe_id, dishname, email, name, instructions, num_comments, num_likes, num_served, time) values ("
 							+ "'" + recipe_id + "', " 
 							+ "'" + dishname + "', " 
 							+ "'" + email + "', " 
+							+ "'" + creatorname + "' , "
 							+ "'" + instructions + "', " 
 							+ "0, "
 							+ "0, "

@@ -2,7 +2,6 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -15,17 +14,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.mysql.jdbc.Connection;
+
 /**
- * Servlet implementation class UpdateFridge
+ * Servlet implementation class DeleteComment
  */
-@WebServlet("/updatefridge")
-public class UpdateFridge extends HttpServlet {
+@WebServlet("/deletecomment")
+public class DeleteComment extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public UpdateFridge() {
+    public DeleteComment() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -36,11 +37,6 @@ public class UpdateFridge extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
-		//get the parameters
-		String ingredient = request.getParameter("ingredient");
-		String update_type = request.getParameter("update_type");
-		
-		// check that user is logged in
 		HttpSession session = request.getSession(true);
 		Object result = session.getAttribute("login_check"); 
 		Boolean logged_in = false; 
@@ -48,41 +44,39 @@ public class UpdateFridge extends HttpServlet {
 			logged_in = (Boolean) session.getAttribute("login_check");
 		}
 		if (!logged_in){	
-			response.sendRedirect("/mycookbook/index.html");
+			session.setAttribute("deletecomment", "login");
+			response.sendRedirect("/mycookbook/viewrecipe");
 		}
-		
-		String email = (String) session.getAttribute("email"); 
-		
-		//Update the user's fridge
+		session.setAttribute("deletecomment","Failure");	
+		String commenter_email = (String) session.getAttribute("email");
 		Connection connection = null;
 		PrintWriter out = response.getWriter();
-		session.setAttribute("updatefridge", "Failure");
+		
 		try{
-			connection = DriverManager.getConnection("jdbc:mysql://box289.bluehost.com/penniaac_llw", "penniaac_wll", "lixiang");
+			connection = (Connection) DriverManager.getConnection("jdbc:mysql://box289.bluehost.com/penniaac_llw", "penniaac_wll", "lixiang");
+			int comment_id = Integer.parseInt(request.getParameter("comment_id"));
+			//int comment_id = Integer.parseInt((String) session.getAttribute("comment_id")); 
+			int recipe_id = Integer.parseInt((String) session.getAttribute("current_recipe_id")); 
 			Statement statement = connection.createStatement();
 			
-			out.println("<html><body>");
-			out.println("<link rel=\"stylesheet\" href=\"http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css\">");
+			// Delete the comment
+			String update = "Delete from recipe_comments where comment_id =" + comment_id;	
+			int updatecheck1 = statement.executeUpdate(update);
 			
-			// Add or Delete Ingredient 
-			String update = "";
-			if (update_type.equals("Add")){
-				update = "Insert into fridge (email, ingredient) values ('" + email + "','" + ingredient + "')";
-			} else{
-				update = "Delete from fridge where email='"
-						+ email + "' AND ingredient='" + ingredient + "'";
-			}
-			int rs = statement.executeUpdate(update);
-			if (rs == 1){
-				session.setAttribute("updatefridge","Success");
-			}
-			
+			//update the recipe itself
+			update = "Update recipes set num_comments = num_comments-1 where recipe_id = " + recipe_id;
+			int updatecheck2 = statement.executeUpdate(update);
 		
-			out.println("</body></html>");
+			if (updatecheck1 == 1 & updatecheck2 == 1){
+				session.setAttribute("deletecomment","Success");
+			}
+		//	else{
+		//		session.setAttribute("deletecomment","Failure");					
+		//	}
 		}catch (SQLException e ) {
-			out.println("SQL Exception!" + e);
+			out.println(e); 		
 		} finally {
-			response.sendRedirect("/mycookbook/myfridge"); 
+			response.sendRedirect("/mycookbook/viewrecipe"); 
 			try {
 				connection.close();
 			} catch (SQLException e) {
@@ -90,6 +84,7 @@ public class UpdateFridge extends HttpServlet {
 				e.printStackTrace();
 			}
 		}
+		
 	}
 
 	/**
