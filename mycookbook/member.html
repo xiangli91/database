@@ -17,7 +17,8 @@
 	<div class="navpane">
 		<div class="leftnav"><!--top left side--></div>
 		<div class="centernav">
-			<div id="logo"></div>
+			<a href="MemberHome.jsp">
+			<div id="logo"></div></a>
 			<div class="login">
 				<form action="logout" method="get">
 					<span class="welcomeuser">Welcome User</span><input type="submit" class="loginbtn" value="Logout"/>
@@ -59,7 +60,7 @@
 				</div>
 				<div>
 					<br/>
-					<a class="advsearchbtn" onclick="$('.info').show();">Advanced Search</a>
+					<a class="advsearchbtn" onclick="toggleContent('.info')">Advanced Search</a>
 				</div>
 			</div>
 			<!--<div class="leftcenterpane">

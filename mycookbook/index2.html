@@ -4,7 +4,7 @@
 <head>
 <link rel="stylesheet" href="mcb_stylesheet.css"/>
 <!--<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">-->
-<script src="./mcb.js" language="javascript"></script>
+<script src="./javascript/mcb.js" language="javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" language="javascript"></script>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <title>myCookbook</title>
@@ -17,7 +17,7 @@
 		<div class="centernav">
 			<div id="logo"></div>
 			<div class="login">
-				<input type="button" class="loginbtn" value="Login" onclick="$('.loginform').show();"></span>
+				<input type="button" class="loginbtn" value="Login" onclick="toggleContent('.loginform');"></span>
 			</div>
 			<div class="loginform">
 				<form action="login" method="get" style="position:relative;right:10px; width: 250px;">
