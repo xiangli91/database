@@ -88,7 +88,7 @@ public class Login extends HttpServlet {
 					"<input type ='submit' class='btn large primary' value='Go to my Homepage now!' />" +
 				"</form>");
 				 
-				 response.sendRedirect("/mycookbook/memberhome"); 
+				 response.sendRedirect("/mycookbook/MemberHome.jsp"); 
 				 
 		        // out.println("<p><a href='memberindex.html'>Go to my Homepage now!</a></p>");
 			}

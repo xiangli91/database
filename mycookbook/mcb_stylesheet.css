@@ -498,3 +498,11 @@ specialtext{
 td .adv{
 	float:right;
 }
+
+td .updown{
+	width:75px;
+}
+
+input .nutrition{
+	width:50px;
+}

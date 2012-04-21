@@ -4,7 +4,7 @@
 <head>
 <link rel="stylesheet" href="mcb_stylesheet.css"/>
 <!--<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">-->
-<script type="text/javascript" src="./mcb.js" language="javascript"></script>
+<script type="text/javascript" src="mcb.js" language="javascript"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" language="javascript"></script>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <title>Member Home</title>
@@ -49,18 +49,18 @@
 				</div>
 				<div>
 					<div id="searchBoxOne">
-		  				<form action="?" method="get">
-		    				<input class="search" type="text" />
-		    				<input class="submit" type="submit" value="Search" />
+		  				<form action="???" method="get">
+		    				<input class="search" type="text" name="name"/>
+		    				<input class="submit" type="submit" name="search" value="Search" />
 		    				<br/>
-		    				<span><input type ="radio" name="byingredient" value="by Ingredient"/><specialtext>by Ingredient </specialtext></span>
-							<span><input type ="radio" name="byname" value="by Name"/><specialtext>by Name </specialtext></span>
+		    				<span><input type ="radio" id="byingredient" name="searchtype" value="by Ingredient"/><specialtext>by Ingredient </specialtext></span>
+							<span><input type ="radio" id="byname" name="searchtype" value="by Name"/><specialtext>by Name </specialtext></span>
 	  					</form>
 					</div>
 				</div>
 				<div>
 					<br/>
-					<a class="advsearchbtn" onclick="toggleContent('.info')">Advanced Search</a>
+					<a class="advsearchbtn" onclick="toggleContent('.info'); copyForm();">Advanced Search</a>
 				</div>
 			</div>
 			<!--<div class="leftcenterpane">
@@ -95,53 +95,120 @@
 		<div class="rightpane"> <!--right side--> </div>
 	</div>
 	
-	<div class="info" style="display:none;">
+	<div class="info" style="display:block;">
 		<div class="advancedsearchinfo" style="left: 142px; top: 5px">
-			<div class="leftcenterinfo">
+<!--			<div class="leftcenterinfo"> -->
+			<form action="???" method="get">
 				<br/>
 				<table>
 				<tr>
-					<td><span class="adv"><specialtext>Calories: </specialtext><input type="text" name="kcal"/></span></td>
-					<td><span class="adv"><specialtext>Protein: </specialtext><input type="text" name="protein"/></span></td>
+					<input id="search-copy" type="text" name="name"/>
+		    		<br/>
+		    		<span><input type ="radio" id="byingredient-copy" name="searchtype-copy" value="by Ingredient"/><specialtext>by Ingredient </specialtext></span>
+					<span><input type ="radio" id="byname-copy"name="searchtype-copy" value="by Name"/><specialtext>by Name </specialtext></span>
+				</tr>
+				<tr>
+					<td><span class="adv"><specialtext>Calories (2K-25K kcal): </specialtext>
+					<input type="text" name="kcal" style="width: 75px"/></span></td>
+					<td class="updown" style="width: 175px">
+						<span><input type="radio" name="kcalupdown" value="kcalup"/><specialtext>at least</specialtext></span>
+						<span><input type="radio" name="kcalupdown" value="kcaldown"/><specialtext>not more than</specialtext></span>
+					</td>
+					<td><span class="adv"><specialtext>Protein (50g): </specialtext>
+					<input type="text" name="protein" style="width: 75px"/></span></td>
+					<td style="width: 175px">
+						<span><input type="radio" name="proteinupdown" value="proteinup"/><specialtext>at least</specialtext></span>
+						<span><input type="radio" name="proteinupdown" value="proteindown"/><specialtext>not more than</specialtext></span>
+					</td>
 				</tr>
 				<tr>
 					<td><span class="adv"><specialtext>Fat: </specialtext><input type="text" name="fat"/></span></td>
+					<td style="width: 175px">
+						<span><input type="radio" name="fatupdown" value="fatup"/><specialtext>at least</specialtext></span>
+						<span><input type="radio" name="fatupdown" value="fatdown"/><specialtext>not more than</specialtext></span>
+					</td>
 					<td><span class="adv"><specialtext>Carbohydrate: <input type="text" name="carbohydrate"/></span></td>
+					<td style="width: 175px">
+						<span><input type="radio" name="carbohydrateupdown" value="carbohydrateup"/><specialtext>at least</specialtext></span>
+						<span><input type="radio" name="carbohydrateupdown" value="carbohydratedown"/><specialtext>not more than</specialtext></span>
+					</td>
 				</tr>
 				<tr>
 					<td><span class="adv"><specialtext>Fiber: </specialtext><input type="text" name="fiber"/></span></td>
-					<td><span class="adv"><specialtext>Sugar: </specialtext><input type="text" name="sugar"/></span></td>
+					<td style="width: 175px">
+						<span><input type="radio" name="fiberupdown" value="fiberup"/><specialtext>at least</specialtext></span>
+						<span><input type="radio" name="fiberupdown" value="fiberdown"/><specialtext>not more than</specialtext></span>
+					</td>
+					<td><span class="adv"><specialtext>Sugar(20-36g): </specialtext><input type="text" name="sugar"/></span></td>
+					<td style="width: 175px">
+						<span><input type="radio" name="sugarupdown" value="sugarup"/><specialtext>at least</specialtext></span>
+						<span><input type="radio" name="sugarupdown" value="sugardown"/><specialtext>not more than</specialtext></span>
+					</td>
 				</tr>
 				<tr>
 					<td><span class="adv"><specialtext>Calcium: </specialtext><input type="text" name="calcium"/></span></td>
+					<td style="width: 175px">
+						<span><input type="radio" name="calciumupdown" value="calciumup"/><specialtext>at least</specialtext></span>
+						<span><input type="radio" name="calciumupdown" value="calciumdown"/><specialtext>not more than</specialtext></span>
+					</td>
 					<td><span class="adv"><specialtext>Iron: </specialtext><input type="text" name="iron"/></span></td>
+					<td style="width: 175px">
+						<span><input type="radio" name="ironupdown" value="ironup"/><specialtext>at least</specialtext></span>
+						<span><input type="radio" name="ironupdown" value="irondown"/><specialtext>not more than</specialtext></span>
+					</td>
 				</tr>
 				<tr>
 					<td><span class="adv"><specialtext>Magnesium: </specialtext><input type="text" name="magnesium"/></span></td>
+					<td style="width: 175px">
+						<span><input type="radio" name="magnesiumupdown" value="magnesiumup"/><specialtext>at least</specialtext></span>
+						<span><input type="radio" name="magnesiumupdown" value="magnesiumdown"/><specialtext>not more than</specialtext></span>
+					</td>
 					<td><span class="adv"><specialtext>Potassium: </specialtext><input type="text" name="potassium"/></span></td>
+					<td style="width: 175px">
+						<span><input type="radio" name="potassiumupdown" value="potassiumup"/><specialtext>at least</specialtext></span>
+						<span><input type="radio" name="potassiumupdown" value="potassiumdown"/><specialtext>not more than</specialtext></span>
+					</td>
 				</tr>
 				<tr>
 					<td><span class="adv"><specialtext>Sodium: </specialtext><input type="text" name="sodium"/></span></td>
+					<td style="width: 175px">
+						<span><input type="radio" name="sodiumupdown" value="sodiumup"/><specialtext>at least</specialtext></span>
+						<span><input type="radio" name="sodiumupdown" value="sodiumdown"/><specialtext>not more than</specialtext></span>
+					</td>
 					<td><span class="adv"><specialtext>Zinc: </specialtext><input type="text" name="zinc"/></span></td>
+					<td style="width: 175px">
+						<span><input type="radio" name="zincupdown" value="zincup"/><specialtext>at least</specialtext></span>
+						<span><input type="radio" name="zincupdown" value="zincdown"/><specialtext>not more than</specialtext></span>
+					</td>
 				</tr>
 				<tr>
 					<td><span class="adv"><specialtext>Copper: </specialtext><input type="text" name="copper"/></span></td>
+					<td style="width: 175px">
+						<span><input type="radio" name="copperupdown" value="copperup"/><specialtext>at least</specialtext></span>
+						<span><input type="radio" name="copperupdown" value="copperdown"/><specialtext>not more than</specialtext></span>
+					</td>
 					<td><span class="adv"><specialtext>Vitamin C: </specialtext><input type="text" name="vitamin_c"></span></td>
+					<td style="width: 175px">
+						<span><input type="radio" name="vitamin_cupdown" value="vitamin_cup"/><specialtext>at least</specialtext></span>
+						<span><input type="radio" name="vitamin_cupdown" value="vitamin_cdown"/><specialtext>not more than</specialtext></span>
+					</td>
 				</tr>
 				</table>
 				
-				</br>
-	
+				<specialtext style="color:gray">Important: Please note that quantities in parentheses are recommended daily quantities.</specialtext>
+				<br>
+				
+				
 				<specialtext>Limit to My Fridge: </specialtext><input type="checkbox" name="myfridge"/><input class="advsearch" type="submit" name="advanced" value="Advanced Search"/>
-
+			</form>	
 			
-			</div>
+<!--			</div> -->
 			
 			
 			
-			<div class="rightcenterinfo">
+<!--			<div class="rightcenterinfo">
 				<h4>Search Tips</h4>
-			</div>
+			</div>-->
 		</div>
 	</div>
 	

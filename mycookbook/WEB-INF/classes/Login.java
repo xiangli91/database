@@ -89,6 +89,8 @@ public class Login extends HttpServlet {
 				"</form>");
 				 
 				 response.sendRedirect("/mycookbook/MemberHome.jsp"); 
+				 
+		        // out.println("<p><a href='memberindex.html'>Go to my Homepage now!</a></p>");
 			}
 			
 			out.println("</body></html>");
