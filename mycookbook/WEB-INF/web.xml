@@ -10,6 +10,10 @@
         <welcome-file>memberhome</welcome-file> 
     </welcome-file-list> 
 	
+	
+	
+	
+	
 	<servlet>
       <servlet-name>MemberHome</servlet-name>
       <servlet-class>MemberHome</servlet-class>
@@ -30,36 +34,20 @@
       <servlet-class>Logout</servlet-class>
 	</servlet>
  
- <servlet>
-      <servlet-name>MyFridge</servlet-name>
-      <servlet-class>MyFridge</servlet-class>
-	</servlet>
+
  
   <servlet>
       <servlet-name>UpdateFridge</servlet-name>
       <servlet-class>UpdateFridge</servlet-class>
 	</servlet>
  
-	<servlet>
-      <servlet-name>MyRecipe</servlet-name>
-      <servlet-class>MyRecipe</servlet-class>
-	</servlet>
- 
-  
-	<servlet>
-      <servlet-name>AddRecipePage</servlet-name>
-      <servlet-class>AddRecipePage</servlet-class>
-	</servlet>
-  
+
   <servlet>
       <servlet-name>AddRecipe</servlet-name>
       <servlet-class>AddRecipe</servlet-class>
 	</servlet>
   
-  <servlet>
-      <servlet-name>ViewRecipe</servlet-name>
-      <servlet-class>ViewRecipe</servlet-class>
-	</servlet>
+
   
    <servlet>
       <servlet-name>UpdateLike</servlet-name>
@@ -75,6 +63,9 @@
       <servlet-name>DeleteComment</servlet-name>
       <servlet-class>DeleteComment</servlet-class>
 	</servlet>
+  
+  
+  
   
   
   
@@ -100,36 +91,18 @@
       <url-pattern>/logout</url-pattern>
    </servlet-mapping>
    
-      <servlet-mapping>
-      <servlet-name>MyFridge</servlet-name>
-      <url-pattern>/myfridge</url-pattern>
-   </servlet-mapping>
+    
    
        <servlet-mapping>
       <servlet-name>UpdateFridge</servlet-name>
       <url-pattern>/updatefridge</url-pattern>
    </servlet-mapping>
    
-   
-    <servlet-mapping>
-      <servlet-name>MyRecipe</servlet-name>
-      <url-pattern>/myrecipe</url-pattern>
-   </servlet-mapping>
-  
-    <servlet-mapping>
-      <servlet-name>AddRecipePage</servlet-name>
-      <url-pattern>/addrecipepage</url-pattern>
-   </servlet-mapping>
-   
-   
+
+ 
     <servlet-mapping>
       <servlet-name>AddRecipe</servlet-name>
       <url-pattern>/addrecipe</url-pattern>
-   </servlet-mapping>
-   
-    <servlet-mapping>
-      <servlet-name>ViewRecipe</servlet-name>
-      <url-pattern>/viewrecipe</url-pattern>
    </servlet-mapping>
    
    <servlet-mapping>
