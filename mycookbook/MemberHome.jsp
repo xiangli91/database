@@ -9,13 +9,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< HEAD
    <link rel="stylesheet" href="mcb_stylesheet.css">
+=======
+>>>>>>> 60f1a11cbf066761b893d6196f9d574d48f431d2
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
    <title>My Recipes!</title>
 </head>
    
+<<<<<<< HEAD
 <body style="font-family:Arial, Helvetica, sans-serif;font-size:medium;">
 
+=======
+<body>
+	<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">	
+>>>>>>> 60f1a11cbf066761b893d6196f9d574d48f431d2
 	
 	<% 
 		Connection connection = null;
