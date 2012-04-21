@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link rel="stylesheet" href="mcb_stylesheet.css"/>
+<!--<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">-->
+<script src="./mcb.js" language="javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" language="javascript"></script>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>myCookbook</title>
+</head>
+
+<body style="font-family:Arial, Helvetica, sans-serif;font-size:medium;">
+<div class="bodywrapper" align="center">
+	<div class="navpane">
+		<div class="leftnav"><!--top left side--></div>
+		<div class="centernav">
+			<div id="logo"></div>
+			<div class="login">
+				<input type="button" class="loginbtn" value="Login" onclick="$('.loginform').show();"></span>
+			</div>
+			<div class="loginform">
+				<form action="login" method="get" style="position:relative;right:10px; width: 250px;">
+						<div style="float:right;margin-bottom:15px;margin-top:15px;"><label>Email </label><input type="text" class="signupbox" name="email"/></div>
+						<div style="float:right;margin-bottom:15px"><label>Password </label><input type="password" class="signupbox" name="password"/></div>
+						<div style="float:right;margin-top:20px"><input type="submit" id="signupbtn" value="Submit"></div>
+				</form>
+			</div>
+		</div>
+		<div class="rightnav"><!--top right side--></div>
+	</div>
+	<div class="bodypane">
+		<div class="leftpane">left side</div>
+		<div class="centerpane"><br />
+			<div class="leftcenterpane">
+				<div>
+					<h1>Search for your Recipe</h1>
+				</div>
+				<div>
+					<div id="searchBoxOne">
+		  				<form action="?" method="get">
+		    			<input class="search" type="text" />
+		    			<input class="submit" type="submit" value="Search" />
+	  					</form>
+					</div>
+				</div>
+			
+			</div>
+			<div class="rightcenterpane">
+				<div>
+					<h4>Not myCookbook user? Sign up below</h4>
+						
+				</div>
+				<div>
+					<form action="addmember" method="get" style="right:20px; width: 280px;">
+						<div style="float:right;margin-bottom:15px"><label>Name </label><input type="text" class="signupbox" name="name"/></div>
+						<div style="float:right;margin-bottom:15px"><label>Email </label><input type="text" class="signupbox" name="email"/></div>
+						<div style="float:right;margin-bottom:15px"><label>Password </label><input type="password" class="signupbox" name="password"/></div>
+						<div style="float:right;margin-top:30px"><input type="submit" id="signupbtn" value="Submit"></div>
+					</form>
+				</div>
+ 			</div>
+		</div>
+		<div class="rightpane">rightside</div>
+	</div>
+	
+	<div class="info">
+		<div class="centerinfo" style="left: 142px; top: 5px">
+			<div class="leftcenterinfo"><h2 style="color:#333333">Welcome to myCookbook! Over 100 chefs, mums and other foodmakers manage and share their great recipes here.</h2></div>
+			<div class="rightcenterinfo">Twitter Feeds</div>
+		</div>
+	</div>
+	
+	
+	<div class="bottom">
+		<div class="centerbottom" style="left: 141px; top: 2px"> 
+			<span class="misc">
+				<misc>myCookbook</misc>
+				<li style="list-style-type:none;margin:5px;"><misc2>Home</misc2></li>
+				<li style="list-style-type:none;margin:5px"><misc2>Blog</misc2></li>
+				<li style="list-style-type:none;margin:5px"><misc2>Mobile</misc2></li>
+			</span>
+			<span class="misc">
+				<misc>About</misc>
+				<li style="list-style-type:none;margin:5px;"><misc2>Team</misc2></li>
+				<li style="list-style-type:none;margin:5px"><misc2>Press</misc2></li>
+				<li style="list-style-type:none;margin:5px"><misc2>Jobs</misc2></li>
+			</span>
+			<span class="misc">
+				<misc>Support</misc>
+				<li style="list-style-type:none;margin:5px;"><misc2>FAQs</misc2></li>
+				<li style="list-style-type:none;margin:5px"><misc2>Contact Us</misc2></li>
+			</span>
+			<span class="findus"><misc>Find us on: </misc></span>
+		</div>
+	</div>
+
+</div>
+
+
+</body>
+
+</html>

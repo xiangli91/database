@@ -1,0 +1,34 @@
+﻿.bodywrap {
+	
+}
+
+.sidepane {
+	background-color:white;
+}
+
+.centerpane {
+	position:absolute;
+	left:1000px;
+	top:1500px;
+	z-index:-1;
+	background-image:url('../images/site/centerpane_bg.jpg');
+	background-position:center;
+	background-repeat:repeat-x;
+}
+
+h2{
+	color:white;
+	font-family:"Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+	font-size:medium;
+}
+
+span{
+	display:inline;
+}
+
+#logo{
+	background-image:url('../images/site/mcb_logo.png');
+	width:300px;
+	height:200px;
+}
+

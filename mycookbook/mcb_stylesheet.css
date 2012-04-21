@@ -1,0 +1,500 @@
+﻿body{
+	background-image:url('images/site/mcb_body_bg.jpg');
+	background-repeat:repeat;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.bodywrap {
+	background-color:#FF5050;
+	z-index:-2;
+}
+
+.navpane{
+	top:0px;
+	left:0px;
+	width:1200px;
+	height:108px;
+}
+
+.leftnav{
+	top:0px;
+	left:0px;
+	width:142px;
+	height:108px;
+	float:left;
+	display:inline;
+}
+
+.centernav{
+	top:0px;
+	left:142px;
+	width:916px;
+	height:108px;
+	float:left;
+	display:inline;
+	z-index:-1;
+	background-image:url('images/site/mcb_centerpane_bg.jpg');
+	background-position:center;
+	background-repeat:repeat;
+	-moz-box-shadow: 0 0 5px 5px #888;
+	-webkit-box-shadow: 0 0 5px 5px#888;
+	box-shadow: 0 0 5px 5px #888;
+
+}
+
+.rightnav{
+	top:0px;
+	left:1024px;
+	width:142px;
+	height:108px;
+	float:left;
+	display:inline;
+}
+
+.bodypane{
+	top:108px;
+	left:0px;
+	width:1200px;
+}
+
+.leftpane {
+	top:108px;
+	left:0px;
+	width:142px;
+	display:inline;
+	float:left;
+}
+
+.centerpane {
+	left:108px;
+	top:142px;
+	width:916px;
+	height:350px;
+	z-index:-1;
+	display:inline;
+	float:left;
+	background-image:url('images/site/mcb_contentpane_bg.jpg');
+	background-position:center;
+	background-repeat:repeat;
+	-moz-box-shadow: 0 0 5px 5px #888;
+	-webkit-box-shadow: 0 0 5px 5px#888;
+	box-shadow: 0 0 5px 5px #888;
+}
+
+.rightpane{
+	top:108px;
+	left:1024px;
+	width:142px;
+	display:inline;
+	float:left;
+}
+
+.bottom{
+	width:1200px;
+}
+
+.centerbottom{
+	position:relative;
+	left:142px;
+	top:0px;
+	width:916px;
+	height:120px;
+	background-image:url('images/site/mcb_centerpane_bg.jpg');
+	background-repeat:repeat;
+	display:inline;
+	float:left;
+		-moz-box-shadow: 0 0 5px 5px #888;
+	-webkit-box-shadow: 0 0 5px 5px#888;
+	box-shadow: 0 0 5px 5px #888;
+
+}
+
+/*h2{
+	color:white;
+	font-family:"Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+	font-size:medium;
+}*/
+
+.info{
+	width:1200px;
+}
+
+.centerinfo{
+	position:relative;
+	left:142px;
+	top:5px;
+	width:916px;
+	height:250px;
+	background-color:#FFFFFF;
+	display:inline;
+	float:left;
+	-moz-box-shadow: 0 0 5px 5px #888;
+	-webkit-box-shadow: 0 0 5px 5px#888;
+	box-shadow: 0 0 5px 5px #888;
+
+}
+
+.advancedsearchinfo{
+	position:relative;
+	left:142px;
+	top:5px;
+	width:916px;
+	background-color:#FFFFFF;
+	display:inline;
+	float:left;
+	-moz-box-shadow: 0 0 5px 5px #888;
+	-webkit-box-shadow: 0 0 5px 5px#888;
+	box-shadow: 0 0 5px 5px #888;
+
+}
+
+#logo{
+	background-image:url('images/site/mcb_logo.png');
+	position:relative;
+	top:15px;
+	left:25px;
+	width:150px;
+	height:70px;
+	float:left;
+	display:inline;
+}
+
+#logo:hover{
+	background-image:url('images/site/mcb_logo.png');
+	position:relative;
+	top:15px;
+	left:25px;
+	width:150px;
+	height:70px;
+	float:left;
+	display:inline;
+	cursor:pointer;
+	opacity:.50;
+	-moz-opacity:.50;
+	filter:alpha(opacity=50);
+
+}
+
+.misc{
+	position:relative;
+	left:25px;
+	top:15px;
+	width:100px;
+	float:left;
+}
+
+.findus{
+	position:relative;
+	top:15px;
+	width:200px;
+	float:right;
+}
+
+misc{
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	color:#FFFFFF;
+}
+misc2{
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	font-size:small;
+	color:#FF6666;
+}
+
+.leftcenterpane{
+	position:relative;
+	top:0px;
+	left:25px;
+	width:500px;
+	display:inline;
+	float:left;
+}
+
+.rightcenterpane{
+	position:relative;
+	top:0px;
+	right:25px;
+	width:350px;
+	height:300px;
+	display:inline;
+	float:right;
+	background-color:white;
+	opacity:.75;
+	-moz-opacity:.75;
+	filter:alpha(opacity=75);
+}
+
+.leftcenterinfo{
+	position:relative;
+	top:0px;
+	left:25px;
+	width:500px;
+	display:inline;
+	float:left;
+
+}
+
+.rightcenterinfo{
+	position:relative;
+	top:0px;
+	right:25px;
+	width:350px;
+	height:300px;
+	display:inline;
+	float:right;
+
+}
+
+
+#searchBoxOne input.search {
+    font-size: 16px;
+    width:300px;
+    color: black;
+    padding: 6px;
+    -moz-box-shadow:inset 2px 2px 5px #ccc;
+    box-shadow:inset 2px 2px 5px #ccc;
+    border: 1px solid #b8b8b8;
+}
+
+#searchBoxOne input.submit {
+	
+
+    background: #ba4742;
+    width: 75px;
+    height: 35px;
+    border: none;
+    color: #dee4ff;
+    cursor: pointer;
+}
+
+#searchBoxOne input.submit:hover,
+#searchBoxOne input.submit.hover {
+    background: #CC0000;
+    font-weight:bolder;
+    color:white;
+}
+
+.signupbox{
+	font-size:14px;
+	width:175px;
+	height:10px;
+	color: black;
+	padding:6px;
+	-moz-box-shadow:inset 2px 2px 5px #ccc;
+	box-shadow:inset 2px 2px 5px #ccc;
+	border: 1px solid #b8b8b8;
+}
+
+#signupbtn{
+	background: #ba4742;
+    width: 55px;
+    height: 25px;
+    border: none;
+    color: #dee4ff;
+    cursor: pointer;
+}
+
+#signupbtn:hover{
+	background: #CC0000;
+    font-weight:bolder;
+    color:white;
+
+}
+
+.login{
+	float:right;
+	position:relative;
+	right:25px;
+	top:60px;
+}
+
+.welcomeuser{
+	margin-right:5px;
+	color:#FFFFFF;
+}
+
+.loginbtn{
+	background: #ba4742;
+    width: 55px;
+    height: 25px;
+    border: none;
+    color: #dee4ff;
+    cursor: pointer;
+}
+
+.loginbtn:hover{
+	background: #CC0000;
+    font-weight:bolder;
+    color:white;
+}
+
+.advsearch{
+	background: #ba4742;
+    width: 120px;
+    height: 30px;
+    border: none;
+    color: #dee4ff;
+    cursor: pointer;
+
+}
+
+.advsearch:hover{
+	background: #CC0000;
+    font-weight:bolder;
+    color:white;
+
+}
+
+/*
+.navbtn{
+	background-image:url('images/site/mcb_centerpane_bg.jpg');
+	width: 75px;
+	height: 30px;
+	border: none;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+
+.navbtn:hover{
+	background-image:url('images/site/mcb_centerpane_bg.jpg');
+	width: 75px;
+	height: 30px;
+	border-bottom-color:maroon;
+	color: #FFFFFF;
+	cursor: pointer;
+}*/
+
+.loginform{
+	float:right;
+	position:relative;
+	right:25px;
+	top:60px;
+	width:250px;
+	height:150px;
+	background-color:white;
+	border: 2px solid #b8b8b8;
+	display:none;
+	z-index:5;
+}
+
+.signupbox{
+	font-size:14px;
+	width:125px;
+	height:5px;
+	color: black;
+	padding:6px;
+	-moz-box-shadow:inset 2px 2px 5px #ccc;
+	box-shadow:inset 2px 2px 5px #ccc;
+	border: 1px solid #b8b8b8;
+}
+
+.navbackground{
+	position:relative;
+	top:0px;
+	right:25px;
+	width:200px;
+	height:200px;
+	display:inline;
+	float:right;
+	background-color:white;
+	opacity:.75;
+	-moz-opacity:.75;
+	filter:alpha(opacity=75);
+
+}
+
+div.leftdiv{
+	width:50%;
+	height:100%;
+	float:left;
+}
+
+div.rightdiv{
+	width:50%;
+	height:100%;
+	float:right;
+}
+
+.addrecipenav{
+	height:80px;
+	width:100px;
+	background-image:url('images/site/spoon.png');
+	background-size:80px 100px;
+	background-repeat:no-repeat;
+	z-index:3;
+}
+
+.addrecipenav:hover{
+	height:65px;
+	width:90px;
+	background-image:url('images/site/spoon.png');
+	background-size:90px 65px;
+	background-repeat:no-repeat;
+	z-index:3;
+	color:
+}
+
+.myfridgenav{
+	height:60px;
+	width:80px;
+	background-image:url('images/site/fridge.png');
+	background-size:80px 60px;
+	background-repeat:no-repeat;
+	z-index:3;
+
+}
+
+dsa{
+	color:#CCCCCC
+}
+
+.mycookbook{
+	height:60px;
+	width:80px;
+	background-image:url('images/site/book(1).png');
+	background-size:80px 60px;
+	background-repeat:no-repeat;
+	z-index:3;
+
+}
+
+.navbtn{
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	font-size:small;
+	color:#333333;
+	-webkit-transform: rotate(15deg);
+	-moz-transform: rotate(15deg);
+	-ms-transform: rotate(15deg);
+}
+
+.navbtn:hover{
+	color:#800000;
+	font-weight:bolder;
+	-webkit-transform: rotate(345deg);
+	-moz-transform: rotate(345deg);
+	-ms-transform: rotate(345deg);
+
+}
+
+.advsearchbtn{
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	font-size:small;
+	color:gray;
+}
+
+.advsearchbtn:hover{
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	font-size:small;
+	font-weight:bolder;
+	color:maroon;
+	cursor:pointer;
+
+}
+
+specialtext{
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	font-size:x-small;
+}
+
+td .adv{
+	float:right;
+}
